@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>SmartKube_Tutorial</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/agency.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">SmartKube  </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#introduction">Introduction</a>
+        </li>
+        <li class="nav-item">
+                   <a class="nav-link js-scroll-trigger" href="#portfolio">Pre-requisites</a>
+                 </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Demonstration Using Rails App</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#references">References</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container">
+      <div class="intro-text">
+          <div class="intro-lead-in">Container Management Lifecycle.</div>
+      </div>
+    </div>
+  </header>
+  <!-- Introduction -->
+  <section class="page-section" id="introduction">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h3 class="section-heading text-uppercase">Introduction</h3>
+        </div>
+        <p class="text-muted">Containerization is an approach to get software to run reliably when moved from one computing environment to another. This could be from a developer's laptop to a test environment, from a staging environment into production, and perhaps from a physical machine in a data center to a virtual machine in a private or public cloud.</p>
+        <ul class="text-muted">
+        What happens when
+        <li>The supporting software environment is not identical?</li>
+        <li>The network topology might be different?</li>
+        <li>The security policies and storage might be different?<br></li>
+        </ul>
+      </div>
+      <p class="text-muted"> Software developers solve this problem by running software in ‘containers’ in the cloud.</p><br>
+      <div class="col-lg-12">
+          <h6 class="section-heading text-uppercase">What are Containers?</h6>
+          </div>
+          <p class="text-muted">A container consists of an entire runtime environment: an application, plus all its dependencies, libraries and other binaries, and configuration files needed to run it, bundled into one package. By containerizing the application platform and its dependencies, differences in OS distributions and underlying infrastructure are abstracted away. And the best known and most widely used free and open source container management systems is Kubernetes.<br><br></p>
+          <h6 class="section-heading text-uppercase">What is Docker?</h6>
+          <p class="text-muted">Docker is the company driving the container movement and the only container platform provider to address every application across the hybrid cloud. Docker is an open source software platform to create, deploy and manage virtualized application containers on a common operating system , with an ecosystem of allied tools.
+          <br><br></p>
+          <h6 class="section-heading text-uppercase">What is Kubernetes?</h6>
+          <p class="text-muted">Kubernetes is an open source container-orchestration system that automates Linux container operations. It can be deployed as a platform-providing service.
+          It eliminates many of the manual processes involved in deploying and scaling containerized applications. In other words, you can cluster together groups of hosts running Linux containers, and Kubernetes helps us easily and efficiently manage those clusters. These clusters can span hosts across public, private, or hybrid clouds.
+          <br><br></p>
+          
+          <div class="col-lg-12">
+            <h6 class="section-heading text-uppercase">Kubernetes as Managed Service</h6>
+          </div>
+          <p class="text-muted">Kubernetes is a prevalent open-source system however, maintaining the service can be difficult and expensive. For that reason, it is easy to find platforms offering Kubernetes as a managed service.<br><br>Most popular services currently available: Google Kubernetes Engine (GKE), Azure Kubernetes Service (AKE), and Amazon Elastic Container Service for Kubernetes (Amazon EKS).</p>
+          <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Features & Services</th>
+              <th scope="col">Google Kubernetes Engine </th>
+              <th scope="col">Azure Kubernetes Service </th>
+              <th scope="col">Amazon Elastic Container Service for Kubernetes </th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Creator</th>
+            <td class="text-muted">Google</td>
+            <td class="text-muted">Microsoft</td>
+            <td class="text-muted">Amazon</td>
+          </tr>
+          <tr>
+            <th scope="row">Offerings</th>
+            <td class="text-muted">General Availability</td>
+            <td class="text-muted">General Availability</td>
+            <td class="text-muted">General Availability</td>
+          </tr>
+          <tr>
+            <th scope="row">Version</th>
+            <td class="text-muted">1.10</td>
+            <td class="text-muted">1.9</td>
+            <td class="text-muted">1.10</td>
+          </tr>
+          <tr>
+            <th scope="row">Upgrades</th>
+            <td class="text-muted">Auto/On demand</td>
+            <td class="text-muted">On Demand</td>
+            <td class="text-muted">On Demand</td>
+          </tr>
+          <tr>
+            <th scope="row">Auto scale</th>
+            <td class="text-muted">Yes</td>
+            <td class="text-muted">Self-Deployed</td>
+            <td class="text-muted">Self-Deployed</td>
+          </tr>
+          <tr>
+            <th scope="row">Network Policy</th>
+            <td class="text-muted">Yes</td>
+            <td class="text-muted">Self-Deployed</td>
+            <td class="text-muted">Self-Deployed</td>
+          </tr>
+          <tr>
+            <th scope="row">Load Balancer</th>
+            <td class="text-muted">Yes</td>
+            <td class="text-muted">Yes</td>
+            <td class="text-muted">Yes</td>
+          </tr>
+          <tr>
+            <th scope="row">Management via CLI</th>
+            <td class="text-muted">Complete</td>
+            <td class="text-muted">Complete</td>
+            <td class="text-muted">Complete</td>
+          </tr>
+           </tbody>
+          </table>
+        </div>
+         </div>
+          </div>
+  </section>
+  
+  <!-- Prerequisites grid -->
+  <section class="bg-light page-section" id="portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Pre-requisites</h2>
+        </div>
+      </div>
+      <div class="row text-center" >
+        <div class="col-md-4 col-sm-6 portfolio-item ">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/docker.jpg" alt="">
+          </a>
+          
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/kubernetes.jpg" alt="">
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Features -->
+  <section class="page-section" id="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Features</h2>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-balance-scale fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Services Discovery & Load Balancing</h4>
+          <p class="text-muted">Kubernetes can expose a container using the DNS name or using their own IP address. If traffic to a container is high, Kubernetes is able to load balance and distribute the network traffic so that the deployment is stable.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-box-open fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Storage orchestration</h4>
+          <p class="text-muted">Kubernetes allows us to automatically mount a storage system of our choice, such as local storages, public cloud providers, and more.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-cogs fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Automated rollouts and rollbacks</h4>
+          <p class="text-muted">We can describe the desired state for our deployed containers using Kubernetes, and it can change the actual state to the desired state at a controlled rate.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-hdd fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Automatic bin packing</h4>
+          <p class="text-muted">Kubernetes allows us to specify how much CPU and memory (RAM) each container needs. When containers have resource requests specified, Kubernetes can make better decisions to manage the resources for containers.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-stethoscope fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Self-healing</h4>
+          <p class="text-muted">Kubernetes restarts containers that fail, replaces containers, kills containers that don’t respond to our user-defined health check, and doesn’t advertise them to clients until they are ready to serve.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Secret and configuration management</h4>
+          <p class="text-muted">Kubernetes lets us store and manage sensitive information, such as passwords, OAuth tokens, and ssh keys. We can deploy and update secrets and application configuration without rebuilding our container images, and without exposing secrets in our stack configuration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Implementation -->
+  <section class="page-section" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+            <h3 class="section-heading text-uppercase">Demonstration of Rails App using docker.</h3>
+        </div>
+        <br>
+        <br>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="timeline">
+            <li>
+              <div class="timeline-image">
+                  <h4 class="subheading">Step 1</h4>
+                <!--<img class="rounded-circle img-fluid" src="img/about/1.jpg" alt="">-->
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h6 class="subheading">Create Project directory</h6>
+                </div>
+                <div class="timeline-body">
+                    <p class="text-muted">Create a project directory named noteapp. </p>
+                    <code>mkdir noteapp</code>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <!--<img class="rounded-circle img-fluid" src="img/about/2.jpg" alt="">-->
+                <h4 class="subheading">Step 2</h4>
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4 class="subheading">Create a Gemfile and an empty Gemfile.lock.</h4>
+                </div>
+                <div class="timeline-body">
+                    <p class="text-muted">Instead of going with installation of ruby, rails gem and creating application using rails new command. We start with the Gem file. </p>
+                    <code>vi Gemfile</code>
+                    <p class="text-muted">Following is the Gem file content:
+                    <img src ="img/implementation_steps/Gemfile.jpg" width="500" height="250" >
+                    <p class="text-muted"> Also, create an empty Gemfile.lock which we will need to run the bundle install within docker.</p>
+                    <code>touch Gemfile.lock</code>
+                    
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-image">
+                <!-- <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">-->
+                <h4 class="subheading">Step 3</h4>
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4 class="subheading">Build a Dockerfile for the rails application.</h4>
+                </div>
+                <div class="timeline-body">
+                    <p class="text-muted">Create a file called Docker File. Please note that the name of the file has to be "Dockerfile" with "D" as capital.</p>
+                    <code>vi Dockerfile</code>
+                    <img src ="img/implementation_steps/Step3.jpg">
+                    <p class="text-muted">For the noteapp application, the base image for the application's docker image is Ruby. We can pick the latest version of Ruby from the Docker hub website : <a href ="https://hub.docker.com/_/ruby">https://hub.docker.com/_/ruby</a></p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <!--<img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="">-->
+                <h4 class="subheading">Step 4</h4>
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4 class="subheading">Create a Docker compose file </h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">Now, let’s create our first Docker Compose file. All Docker Compose files are YAML files. This file is to define the services involved for the application.</p>
+                  <code> vi docker-compose.yml</code>
+                  <img src ="img/implementation_steps/Step4.jpg" width="550" height="350">
+                  <p class="text-muted"> For the noteapp application, we need two services one is rails application itself and database which in this case is mysql. So, here we are using mysql image from the docker hub. <a href ="https://hub.docker.com/_/mysql">https://hub.docker.com/_/mysql</a></p>
+                </div>
+              </div>
+            </li>
+            <li>
+                <div class="timeline-image">
+                    <!-- <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">-->
+                    <h4 class="subheading">Step 5</h4>
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h4 class="subheading">Run the docker-compose command</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Now run the docker-compose command to create a new rails application.</p>
+                        <code>'docker-compose run app rails new . --force --database=mysql --skip-bundle'</code>
+                        <p class="text-muted">This would create the rails application directory structure in the current directory. It tries to create the db container first which would download the mysql image from the dockerhub, set up the container and create mysql database based on the environment variables set in the docker-compose file. </p>
+                            <img src ="img/implementation_steps/Step5.jpg" >
+                    </div>
+                  </div>
+                </li>
+            <li class="timeline-inverted">
+            <div class="timeline-image">
+                <!-- <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">-->
+                <h4 class="subheading">Step 6</h4>
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="subheading">Edit the database.yml file.</h4>
+                </div>
+                <div class="timeline-body">
+                    <p class="text-muted">Now, we have the db container with db created and rails app directory structure is also created. Edit the database.yml file created after running docker compose command. Set the environment variables.</p>
+                  <img src ="img/implementation_steps/Step6.jpg" >
+                      <p class="text-muted">Also, in the docker-compose.yml set the environment variables under the app services to set  db name, user, password and hostname.</p>
+                    <img src ="img/implementation_steps/Step6.1.jpg" width="550" height="350" >
+                </div>
+              </div>
+            </li>
+            <li>
+            <div class="timeline-image">
+                <!-- <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">-->
+                <h4 class="subheading">Step 7</h4>
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="subheading">Run docker-compose.</h4>
+                </div>
+                <div class="timeline-body">
+                    <p class="text-muted">On the terminal window, let us run the docker compose build which will build the image for the app. This time we have an updated gem file which was updated by the rails new command. This would install all the gems for the rails application which would take a little longer.</p>
+                        <code>docker-compose build</code>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+                       <div class="timeline-image">
+                           <!-- <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">-->
+                           <h4 class="subheading">Step 8</h4>
+                         </div>
+                         <div class="timeline-panel">
+                           <div class="timeline-heading">
+                               <h4 class="subheading">Run docker-compose up to start both the rails and mysql services. </h4>
+                           </div>
+                           <div class="timeline-body">
+                               <code>docker-compose up</code>
+                               <p class="text-muted">Notice both the sql and rails are running on 3000. However, we cannot access 3000 on localhost, as per our docker-compose.yml file we have set it to 3001. On browser, type localhost:3001, where we will have our rails running. </p>
+                           </div>
+                         </div>
+                       </li>
+            <li>
+            <div class="timeline-image">
+                <!-- <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">-->
+                <h4 class="subheading">Step 8</h4>
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="subheading">Add controller, model and views to ensure the rails application is actually running with db connected. </h4>
+                </div>
+                <div class="timeline-body">
+                    <p class="text-muted">Let's use scaffolding to create a note model. We use rails generate scaffold just like rails generate model .</p>
+                    <code>docker-compose run --rm app rails g scaffold note title body:text</code>
+                    <p class="text-muted">Run the migration using compose.</p>
+                    <code>docker-compose run --rm app rake db:migrate</code>
+                </div>
+              </div>
+            </li>
+            </ul>
+            <div align ="center">
+                <h4 class="subheading">Browse localhost:3001/notes.</h4>
+                <img src ="img/implementation_steps/localhost_noteapp.png" width="750" height="300" class="img-thumbnail">
+                    <p class="text-muted">So, in this noteapp application, we can create a note, edit and view. Please note, the stylesheet and layouts are updated making the application UI look pretty by using sample bootstrap template.</p>
+              </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+ 
+  <section class="bg-light page-section" id="team">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 ">
+            <h4 class="section-heading text-uppercase">To deploy the application on GKE.</h4>
+            <div class="container">
+                <br>
+                
+            <table class="table text-muted">
+                <tbody>
+                    <tr class="success">
+                        <td >1. Package your app into a Docker image</td>
+                        <td>PROJECT_ID environment variable must be set to GCP <a href = "https://cloud.google.com/resource-manager/docs/creating-managing-projects%22%20%5Cl%20%22identifying_projects">project ID</a><br> which will be used to associate the container image with your project's <a href="https://cloud.google.com/container-registry">Container Registry</a>. <br>
+                            <code> export PROJECT_ID=[PROJECT_ID] </code><br>
+                            Basically, the command tells the docker to build the image using the Dockerfile in present Directory<br>
+                            <br>Next, we must build the container image of noteapp and tag it for uploading.<br>
+                            <code>docker-compose build</code><br>
+                            <code>docker tag noteapp_app:latest gcr.io/kubernetes-app-258223/noteapp_app:v6</code><br>
+                            where the format is <br>docker tag [SOURCE_IMAGE] [HOSTNAME]/[PROJECT-ID]/[IMAGE]:[TAG]
+                        </td>
+                    </tr>
+                    <tr class="info">
+                        <td>2. Upload the image to a registry</td>
+                        <td>The container image needs to be uploaded to Registry such that GKE can download and run. In order to push the latest tag image, use the below command:<br>
+                        <code>docker push  gcr.io/kubernetes-app-258223/noteapp_app:v6</code><br>
+                        where the format is docker push [HOSTNAME]/[PROJECT-ID]/[IMAGE]:[TAG]<br><br>
+                        Navigate to container registry page on GKE to view the pushed image:
+                         <img class="img-fluid d-block mx-auto" src="img/gke_implementation/container_registry.jpg" alt="">
+                        </td>
+                    </tr>
+                    <tr class="warning">
+                        <td>4. Create a container cluster</td>
+                        <td>Navigate to <a href="https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture">container cluster</a> to run the container image. Once we have the cluster created, we can use Kubernetes to deploy the application to the GKE cluster.<br>
+                            Alternative CLI command would be:<br>
+                        <code>gcloud container clusters create standard-cluster-1 </code><br>
+                        where standard-cluster-1 is the cluster name.<br><br>
+                        Navigate to Kubernetes Engine Page -> click on Clusters tab on GKE to view the cluster details:<br>
+                        <img class="img-fluid d-block mx-auto" src="img/gke_implementation/cluster.jpg" alt=""></img>
+                        </td>
+                    </tr>
+                    <tr class="success">
+                        <td>5. Deploy your app to the cluster</td>
+                        <td>For application deployment in Kubernetes we use Kubernetes API yaml with the previously build docker image from Google container registry.<br>
+                          <img class="img-fluid d-block mx-auto" src="img/gke_implementation/deploy.jpg" alt=""></img><br>
+                          For the deployment to take effect, below is the command:<br>
+                          <code>kubectl apply -f deployment.yaml</code>
+                          
+                          </td>
+                    </tr>
+                    <tr class="danger">
+                        <td>6. Expose your app to the Internet</td>
+                        <td>Currently, the containers run on GKE are not available from the internet as they donot have external IP addresses. Hence, we must explicitly expose our application to traffic from the internet.<br>
+                            <code> kubectl expose deployment standard-cluster-1  --type="LoadBalancer" </code> <br>
+                            where standard-cluster-1 is the cluster name.<br><br>
+                            Navigate to Kubernetes Engine Page -> click on Services & Ingress on GKE to view the external IP :
+                             <img class="img-fluid d-block mx-auto" src="img/gke_implementation/ingress.jpg" alt=""></img>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            Finally, the link to the deployed app : <a href="http://35.232.90.42/notes">http://35.232.90.42/notes<a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Referneces -->
+  <section class="page-section" id="references">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">References</h2>
+          <ul class="list-inline text-left">
+              <li>1. “Deploying a Containerized Web Application &nbsp;|&nbsp; Kubernetes Engine Tutorials &nbsp;|&nbsp; Google Cloud.” Google, Google, <a href="https://cloud.google.com/kubernetes-engine/docs/tutorials/hello-app">cloud.google.com/kubernetes-engine/docs/tutorials/hello-app</a>.<br>
+                  <table class="table">
+                    <tr class="thead-light">
+                      <th scope="col">Synopsis: This tutorial is to help to develop applications in Kubernetes using Google Cloud.
+                      Reliability: Google</th>
+                    </tr>
+                  </table>
+                  </li>
+              
+              <li>2. “Overview of Docker Compose.” Docker Documentation,<a href="https://docs.docker.com/compose/"> docs.docker.com/compose/</a>.<br>
+                  <table class="table">
+                    <tr class="thead-light">
+                      <th scope="col">Synopsis: This site is ideal for individual developers and small teams looking to get started with Docker and experimenting with container-based apps.
+                          Reliability: Docker Inc</th>
+                    </tr>
+                  </table>
+                  </li>
+              
+              <li>3. "Docker Tutorial",Tutorials Point,<a href="https://www.tutorialspoint.com/docker/index.htm">https://www.tutorialspoint.com/docker/index.htm</a><br>
+                  <table class="table">
+                    <tr class="thead-light">
+                      <th scope="col"> Synopsis: This tutorial explains the various aspects of the Docker Container service. Starting with the basics of Docker which focuses on the installation and configuration of Docker. A few chapters of this tutorial cover the development aspects of Docker and how you can get up and running on the development environments using Docker Containers.
+
+                                   Reliability: The website www.tutorialspoint.com is owned and maintained by Tutorials Point India Limited</th>
+                    </tr>
+                  </table>
+                 </li>
+              
+              <li>4. "Learn Kubernetes Basics". Kubernetes.Io, <a href="https://kubernetes.io/docs/tutorials/kubernetes-basics/">https://kubernetes.io/docs/tutorials/kubernetes-basics/</a><br>
+                  <table class="table">
+                                     <tr class="thead-light">
+                                       <th scope="col">Synopsis: The tutorial provides a walkthrough of the basics of the Kubernetes cluster orchestration system. Each module contains some background information on major Kubernetes features and concepts and includes an interactive online tutorial. These interactive tutorials let you manage a simple cluster and its containerized applications.
+                                       Reliability: https://kubernetes.io/</th>
+                                     </tr>
+                                   </table>
+                  </li>
+                  
+                <li>5. Shah, Jay, and Dushyant Dubaria. "Building Modern Clouds: Using Docker, Kubernetes & Google Cloud Platform." 2019 IEEE 9th Annual Computing and Communication Workshop and Conference (CCWC). IEEE, 2019.
+                      <a href="https://ieeexplore.ieee.org/document/8666479">https://ieeexplore.ieee.org/document/8666479</a><br>
+                      <table class="table">
+                                         <tr class="thead-light">
+                                           <th scope="col">Synopsis: This IEEE paper gives a brief idea about implementing the application in Docker, Kubernetes & Google Cloud Platform.
+                                           Reliability: Jay Shah: Telecommunication and Network Engineering, Southern Methodist University, Dallas, TX, USA</th>
+                                         </tr>
+                                       </table>
+                      
+                      
+                </li>
+                <li>6. “Kubernetes.” MapR, <a href="https://mapr.com/products/kubernetes/">https://mapr.com/products/kubernetes/</a><br>
+                    <table class="table">
+                                       <tr class="thead-light">
+                                         <th scope="col">Synopsis: This instructional page clarifies the different parts of the Docker Container administration. Beginning with basics of Docker which centers around the establishment and setup of Docker.
+                                         Reliability: https://mapr.com/</th>
+                                       </tr>
+                                     </table>
+                </li>
+                  
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Docker Modal 1 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">Basics of Docker</h2>
+                <p class="item-intro text-muted">A brief summary on docker and its commands</p>
+                <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt="">
+                    <b>Overview<br></b>
+                    <p class="text-muted text-justify">Docker is a client side application program, we can install the docker on to our system. It acts as service and can be deployed onto any server. So, we can take the container and deploy in any container platform. It also acts as social netwokring platform, i.e. we can share image so that whenenver somebody wants to start at given specific check point they can start there. Lastly, Docker is also a company that does and manage all of this for you.
+                    <br><br>
+                     <b>Workflow of Docker<br></b>
+                    <img src ="img/Workflow_docker.jpg"><br><br>
+                    Visit <a href="https://docs.docker.com/v17.09/engine/installation/">'install docker' </a> to install docker on desktop.
+                   <br>Also, to download Docker images that are built by other communities, check <a href="https://hub.docker.com/">Docker Hub</a>.</p><br>
+                  <p class="text-muted text-left">Most commonly used docker commands:</p>
+                  <table class="table text-justify">
+                  <thead>
+                    <tr>
+                      <th class="align-left" scope="col">Commands</th>
+                      <th scope="col">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="align-right"><code>docker --version</code></td>
+                      <td>Command used to find the version of Docker installed</td>
+                    </tr>
+                    <tr>
+                      <td><code>docker --help</code></td>
+                      <td>List all the commands available in docker along with options.</td>
+                    </tr>
+                    <tr>
+                      <td><code>docker pull</code></td>
+                      <td>Pulls a new Docker imafe from Docker hub.</td>
+                    </tr>
+                    <tr>
+                      <td><code>docker image</code></td>
+                      <td>Pulls a new Docker image from Docker hub.</td>
+                    </tr>
+                    <tr>
+                      <td><code>docker run</code></td>
+                      <td>Executes a Docker image on your local repository and creates a running container out of it.</td>
+                    </tr>
+                    <tr>
+                      <td><code>docker build</code></td>
+                      <td>Used to compile the Dockerfile, for building custom Docker images.</td>
+                    </tr>
+                    <tr>
+                      <td><code>docker container</code></td>
+                      <td>Used to perform various operations on container.</td>
+                    </tr>
+                    <tr>
+                      <td><code>docker ps</code></td>
+                      <td>Lists the different containers.</td>
+                    </tr>
+                    <tr>
+                      <td><code>docker push</code></td>
+                      <td>To push a Docker image on your local repository to the Docker Hub.</td>
+                    </tr>
+                    <tr>
+                      <td><code>docker exec</code></td>
+                      <td>To access an already running container an perform operations inside the container.</td>
+                    </tr>
+                    <tr>
+                      <td><code>docker compose</code><br>
+                      <br><code>docker-compose build</code>
+                      <br><code>docker-compose up</code>
+                      </td>
+                      <td> To power multi-container applications where various services will be hosted inside different containers. <br><br>
+                          Commands are executed in the directory where YML file is present for building compose.
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Kubernetes Modal 2 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">Basics of Kubernetes</h2>
+                <p class="item-intro text-muted">A brief summary on docker and its commands</p>
+                <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
+                <p class="text-muted text-left">Say, our website or app makes it to the big news and drives a lot of traffic, and we need to scale up fast? How will we manage this scaled up situation? This is where Kubernetes comes in place. It gives us means to do deployments, easy going to scale up and monitor.</p>
+                <div class="text-muted text-left">
+                  <h6 class="subheading">Setup required before you start to enable Kubernetes Engine API:</h6>
+                  <ul class="table text-muted" align="left">
+                      <li>Check the <a href=""> Kubernetes Engine page</a> in the GCP Console.</li>
+                      <li>Create or select a project.</li>
+                      <li>It takes few minutes for the API and related services to be enabled, sit tight!</li>
+                      <li>Ensure that billing is enabled for the GCP project.</li>
+                    </ul>
+                    <h6 class="subheading">Other Pre-requisites:</h6>
+                    <ul class="table text-muted" align="left">
+                        <li>Google cloud SDK must be installed, which has the gcloud CLI tool.</li>
+                        <li>Install kubectl component to communicate with Kubernetes, which is the cluster orchestration system of GKE clusters. Kubectl commands are used to interact and manage Kubernetes objects and the cluster. </li>
+                        <br>
+                </div>
+                <p class="text-muted text-left">Most commonly used docker commands:</p>
+                <table class="table text-justify">
+                <thead>
+                  <tr>
+                    <th class="align-left" scope="col">Commands</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <td><code>$ kubectl run my-app --image=[image name]:v1 --port=[port number] deployment "[file name]" created</code></td>
+                    <td>Pulls the image from the Repository and create a Container on the Cluster</td>
+                  </tr>
+                  <tr>
+                    <td><code>kubectl get pods</code></td>
+                    <td>To see the containers running in your cluster</td>
+                  </tr>
+                  <tr>
+                    <td><code>kubectl get deployments</code></td>
+                    <td>Displays current deployments.</td>
+                  </tr>
+                  <tr>
+                    <td><code>kubectl scale –replica = [count]</code></td>
+                    <td>Scales the size of Kubernetes Deployments.</td>
+                  </tr>
+                  <tr>
+                    <td><code>kubectl cluster-info</code></td>
+                    <td>Displays the cluster Info.</td>
+                  </tr>
+                  <tr>
+                    <td><code>kubectl config delete-cluster [Cluster Name]</code></td>
+                    <td>Deletes the specified cluster  container.</td>
+                  </tr>
+                  <tr>
+                    <td><code>docker ps</code></td>
+                    <td>Lists the different containers.</td>
+                  </tr>
+                  </tbody>
+                </table>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Contact form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/agency.min.js"></script>
+
+</body>
+
+</html>
